@@ -1,61 +1,60 @@
-INTERFACE zif_aff_dynp_v1 PUBLIC.
+INTERFACE if_aff_dynp_v1 PUBLIC.
 
   "! <p class="shorttext">Screen Type</p>
   "! Screen type
-  "! $values {@link zif_aff_dynp_v1.data:co_screen_type}
-  "! $default {@link zif_aff_dynp_v1.data:co_screen_type.main_screen_space}
+  "! $values {@link if_aff_dynp_v1.data:co_screen_type}
+  "! $default {@link if_aff_dynp_v1.data:co_screen_type.main_screen_space}
   TYPES ty_screen_type TYPE c LENGTH 1.
 
   "! <p class="shorttext">Dictionary Modified</p>
   "! Dictionary modified
-  "! $values {@link zif_aff_dynp_v1.data:co_dictionary_modified}
-  "! $default {@link zif_aff_dynp_v1.data:co_dictionary_modified.original}
+  "! $values {@link if_aff_dynp_v1.data:co_dictionary_modified}
+  "! $default {@link if_aff_dynp_v1.data:co_dictionary_modified.original}
   TYPES ty_dictionary_modified TYPE c LENGTH 1.
 
   "! <p class="shorttext">Dropdown</p>
   "! Dropdown
-  "! $values {@link zif_aff_dynp_v1.data:co_dropdown}
-  "! $default {@link zif_aff_dynp_v1.data:co_dropdown.none}
+  "! $values {@link if_aff_dynp_v1.data:co_dropdown}
+  "! $default {@link if_aff_dynp_v1.data:co_dropdown.none}
   TYPES ty_dropdown TYPE c LENGTH 1.
 
   "! <p class="shorttext">Input Status</p>
   "! Input status
-  "! $values {@link zif_aff_dynp_v1.data:co_input_status}
-  "! $default {@link zif_aff_dynp_v1.data:co_input_status.possible}
+  "! $values {@link if_aff_dynp_v1.data:co_input_status}
+  "! $default {@link if_aff_dynp_v1.data:co_input_status.possible}
   TYPES ty_input_status TYPE c LENGTH 1.
 
   "! <p class="shorttext">Output Style</p>
   "! Output style
-  "! $values {@link zif_aff_dynp_v1.data:co_output_style}
+  "! $values {@link if_aff_dynp_v1.data:co_output_style}
   TYPES ty_output_style TYPE c LENGTH 30.
 
   "! <p class="shorttext">Reaction To Switch</p>
   "! Reaction to switch
-  "! $values {@link zif_aff_dynp_v1.data:co_reaction_to_switch}
-  "! $default {@link zif_aff_dynp_v1.data:co_reaction_to_switch.display}
+  "! $values {@link if_aff_dynp_v1.data:co_reaction_to_switch}
   TYPES ty_reaction_to_switch TYPE c LENGTH 1.
 
   "! <p class="shorttext">Value List Type</p>
   "! Value list
-  "! $values {@link zif_aff_dynp_v1.data:co_value_list}
-  "! $default {@link zif_aff_dynp_v1.data:co_value_list.automatic}
+  "! $values {@link if_aff_dynp_v1.data:co_value_list}
+  "! $default {@link if_aff_dynp_v1.data:co_value_list.automatic}
   TYPES ty_value_list TYPE c LENGTH 1.
 
   "! <p class="shorttext">Input Help Key</p>
   "! Input help key
-  "! $values {@link zif_aff_dynp_v1.data:co_input_help_key}
-  "! $default {@link zif_aff_dynp_v1.data:co_input_help_key.temporary_if_f4_exists}
+  "! $values {@link if_aff_dynp_v1.data:co_input_help_key}
+  "! $default {@link if_aff_dynp_v1.data:co_input_help_key.temporary_if_f4_exists}
   TYPES ty_input_help_key TYPE c LENGTH 1.
 
   "! <p class="shorttext">Function Code Type</p>
   "! Function code type
-  "! $values {@link zif_aff_dynp_v1.data:co_function_code_type}
-  "! $default {@link zif_aff_dynp_v1.data:co_function_code_type.normal}
+  "! $values {@link if_aff_dynp_v1.data:co_function_code_type}
+  "! $default {@link if_aff_dynp_v1.data:co_function_code_type.normal}
   TYPES ty_function_code_type TYPE c LENGTH 1.
 
   "! <p class="shorttext">Container Type</p>
   "! Container type
-  "! $values {@link zif_aff_dynp_v1.data:co_container_type}
+  "! $values {@link if_aff_dynp_v1.data:co_container_type}
   TYPES ty_container_type TYPE c LENGTH 20.
 
   "! <p class="shorttext">Line Selectability</p>
@@ -237,27 +236,27 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     "! <p class="shorttext">Container Type</p>
     "! Container type
     BEGIN OF co_container_type,
-      "! <p class="shorttext">Subscreen</p>
-      "! Subscreen container
-      subscreen           TYPE ty_container_type VALUE 'subscreen',
-      "! <p class="shorttext">Tabstrip Control</p>
-      "! Tabstrip control container
-      tabstrip_control    TYPE ty_container_type VALUE 'tabstripControl',
-      "! <p class="shorttext">Splitter Control</p>
-      "! Splitter control container
-      splitter_control    TYPE ty_container_type VALUE 'splitterControl',
-      "! <p class="shorttext">Custom Control</p>
-      "! Custom control container
-      custom_control      TYPE ty_container_type VALUE 'customControl',
+***      "! <p class="shorttext">Subscreen</p>
+***      "! Subscreen container
+***      subscreen           TYPE ty_container_type VALUE 'Subscreen',
+***      "! <p class="shorttext">Tabstrip Control</p>
+***      "! Tabstrip control container
+***      tabstrip_control    TYPE ty_container_type VALUE 'Tabstrip Control',
+***      "! <p class="shorttext">Splitter Control</p>
+***      "! Splitter control container
+***      splitter_control    TYPE ty_container_type VALUE 'Splitter Control',
+***      "! <p class="shorttext">Custom Control</p>
+***      "! Custom control container
+***      custom_control      TYPE ty_container_type VALUE 'Custom Control',
       "! <p class="shorttext">Table Control</p>
       "! Table control container
-      table_control       TYPE ty_container_type VALUE 'tableControl',
-      "! <p class="shorttext">Step Loop</p>
-      "! Step loop container
-      step_loop           TYPE ty_container_type VALUE 'steploop',
-      "! <p class="shorttext">Radio Button Group</p>
-      "! Radio button group container
-      radio_button_group  TYPE ty_container_type VALUE 'radiobuttonGroup',
+      table_control       TYPE ty_container_type VALUE 'Table Control',
+***      "! <p class="shorttext">Step Loop</p>
+***      "! Step loop container
+***      step_loop           TYPE ty_container_type VALUE 'Step Loop',
+***      "! <p class="shorttext">Radio Button Group</p>
+***      "! Radio button group container
+***      radio_button_group  TYPE ty_container_type VALUE 'Radio Button Group',
     END OF co_container_type,
 
     "! <p class="shorttext">Line Selectability</p>
@@ -298,48 +297,63 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
       screen_type                    TYPE ty_screen_type,
       "! <p class="shorttext">Next Screen</p>
       "! Next screen number
+      "! $required
       next_screen                    TYPE c LENGTH 4,
       "! <p class="shorttext">Screen Width</p>
       "! Maximum number of columns
+      "! $required
       length                         TYPE i,
       "! <p class="shorttext">Screen Height</p>
       "! Maximum number of lines
+      "! $required
       height                         TYPE i,
       "! <p class="shorttext">Lines Occupied</p>
-      "! Number of lines occupied by screen elements
+      "! Actual lines occupied by screen elements (read-only, derived — not written on deserialization)
+      "! $showAsOptional
       lines_occupied                 TYPE i,
       "! <p class="shorttext">Columns Occupied</p>
-      "! Number of columns occupied by screen elements
+      "! Actual columns occupied by screen elements (read-only, derived — not written on deserialization)
+      "! $showAsOptional
       columns_occupied               TYPE i,
-      "! <p class="shorttext">Hold Data</p>
+       "! <p class="shorttext">Hold Data</p>
       "! Keep field contents between calls
+      "! $required
       hold_data                      TYPE abap_bool,
       "! <p class="shorttext">Switch Off Runtime Compression</p>
       "! Runtime compression disabled
+      "! $required
       switch_off_runtime_compression TYPE abap_bool,
       "! <p class="shorttext">Template Screen</p>
       "! Screen is a template (not executable)
+      "! $required
       is_template                    TYPE abap_bool,
       "! <p class="shorttext">Hold Scroll Position</p>
       "! Keep scroll position between calls
+      "! $required
       hold_scroll_position           TYPE abap_bool,
       "! <p class="shorttext">Without Application Toolbar</p>
       "! Application toolbar is hidden
+      "! $required
       without_application_toolbar    TYPE abap_bool,
       "! <p class="shorttext">Fiori Zoom-In Disabled</p>
       "! Fiori zoom-in disabled
+      "! $required
       fiori_zoom_disabled            TYPE abap_bool,
       "! <p class="shorttext">Initial Cursor Field</p>
       "! Initial cursor position
+      "! $required
       initial_cursor_field           TYPE c LENGTH 132,
       "! <p class="shorttext">Screen Group</p>
       "! Logical grouping of screens
+      "! $required
       screen_group                   TYPE c LENGTH 4,
       "! <p class="shorttext">Context Menu Form</p>
       "! Form routine for context menu handling
+      "! $required
       context_menu_form              TYPE string,
       "! <p class="shorttext">Has Fixed Font</p>
       "! Proportional-/Fix-Font
+      "! $required
       has_fixed_font                 TYPE abap_bool,
       "! <p class="shorttext">OK Code</p>
       "! OK code/function code triggered on screen
@@ -549,48 +563,63 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     BEGIN OF ty_property_bag,
       "! <p class="shorttext">Text Field</p>
       "! Assigns a label field for accessibility support
+      "! $required
       text_field                TYPE ty_text_field,
       "! <p class="shorttext">Tooltip Text</p>
       "! Assigns a tooltip text to a screen field for accessibility support
+      "! $required
       tooltip_text              TYPE ty_tooltip_text,
       "! <p class="shorttext">Item Count</p>
       "! Displays the number of lines in controls
+      "! $required
       item_count                TYPE ty_item_count,
       "! <p class="shorttext">Disable Implicit Labels</p>
       "! Disables automatic label assignment strategies
+      "! $required
       disable_implicit_labels   TYPE ty_set_active_property,
       "! <p class="shorttext">Fiori Disable Auto Align</p>
       "! Prevents automatic right-justified alignment of labels in Fiori
+      "! $required
       fiori_disable_auto_align  TYPE ty_set_active_property,
       "! <p class="shorttext">Fiori Disable Auto Expand</p>
       "! Keeps label length as defined in screen in Fiori
+      "! $required
       fiori_disable_auto_expand TYPE ty_set_active_property,
       "! <p class="shorttext">Fiori Navigation Button</p>
       "! Marks a button as a Fiori navigation button
+      "! $required
       fiori_navigation_button   TYPE ty_set_active_property,
       "! <p class="shorttext">Keep Tab</p>
       "! Keeps tab navigation within a subscreen area
+      "! $required
       keep_tab                  TYPE ty_set_active_property,
       "! <p class="shorttext">Barcode Input</p>
       "! Supports scanning and processing barcode data
+      "! $required
       barcode_input             TYPE ty_set_active_property,
       "! <p class="shorttext">Knowledge Object</p>
       "! Links a dialog help button to a Knowledge Warehouse object
+      "! $required
       knowledge_object          TYPE ty_knowledge_object,
       "! <p class="shorttext">Hyperlink</p>
       "! Supports SAP internal Drag&Relate hyperlinks
+      "! $required
       hyperlink                 TYPE ty_hyperlink,
       "! <p class="shorttext">Speech</p>
       "! Enables speech input and output features
+      "! $required
       speech                    TYPE ty_speech,
       "! <p class="shorttext">RFID</p>
       "! Enables RFID device integration and data operations
+      "! $required
       rfid                      TYPE ty_rfid,
       "! <p class="shorttext">Is RFID Data</p>
       "! Marks fields for RFID-only data entry
+      "! $required
       is_rfid_data              TYPE ty_set_active_property,
       "! <p class="shorttext">Custom</p>
       "! Defines custom attributes for frontend processing
+      "! $required
       custom_property           TYPE ty_custom_property,
     END OF ty_property_bag.
 
@@ -628,18 +657,23 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
       format              TYPE c LENGTH 4,
       "! <p class="shorttext">Input</p>
       "! User input enabled
+      "! $required
       input               TYPE abap_bool,
       "! <p class="shorttext">Output</p>
       "! User output enabled
+      "! $required
       output              TYPE abap_bool,
       "! <p class="shorttext">Output Only</p>
       "! Display-only field
+      "! $required
       output_only         TYPE abap_bool,
       "! <p class="shorttext">Dictionary Field</p>
       "! Referenced ABAP Dictionary (DDIC) field
+      "! $required
       dictionary_field    TYPE string,
       "! <p class="shorttext">Dictionary Modified</p>
       "! Indicates whether DDIC-derived attributes have been modified
+      "! $required
       dictionary_modified TYPE ty_dictionary_modified,
     END OF ty_field_general.
 
@@ -649,61 +683,78 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     BEGIN OF ty_field_texts_templates,
       "! <p class="shorttext">Text Or IO Field</p>
       "! Text or input/output Field Template
+      "! $required
       text_or_io_field TYPE c LENGTH 132,
       "! <p class="shorttext">Dropdown</p>
       "! Dropdown
+      "! $required
       dropdown         TYPE ty_dropdown,
       "! <p class="shorttext">With Icon</p>
       "! Allows the output field to display an icon and optional text
+      "! $required
       with_icon        TYPE abap_bool,
-      "! <p class="shorttext">Icon</p>
-      "! Identifies the icon ID
-      icon             TYPE c LENGTH 4,
+***      "! <p class="shorttext">Icon</p>
+***      "! Identifies the icon ID
+***      "! $required
+***      icon             TYPE c LENGTH 4,
       "! <p class="shorttext">Icon Name</p>
       "! Specifies the name of the icon assigned to the screen element
+      "! $required
       icon_name        TYPE c LENGTH 30,
       "! <p class="shorttext">Icon Tooltip</p>
       "! Specifies the tooltip text displayed when hovering over the element
+      "! $required
       icon_tooltip     TYPE c LENGTH 30,
     END OF ty_field_texts_templates.
 
-  TYPES:
+    TYPES:
     "! <p class="shorttext">Special</p>
     "! Special
     BEGIN OF ty_field_special,
       "! <p class="shorttext">Input Status</p>
       "! Defines whether input is allowed, optional, recommended, or required
-      input_status             TYPE ty_input_status,
+      "! $required
+      input_status                     TYPE ty_input_status,
       "! <p class="shorttext">Star Entry As First Character</p>
       "! Allows special input processing when an entry begins with '*'
-      star_entry_as_first_char TYPE abap_bool,
+      "! $required
+      star_entry_as_first_char         TYPE abap_bool,
       "! <p class="shorttext">Input Reset Disabled</p>
       "! Prevents field input from being cleared with the reset character '!'
-      input_reset_disabled     TYPE abap_bool,
+      "! $required
+      input_reset_disabled             TYPE abap_bool,
       "! <p class="shorttext">Case Sensitive Entry</p>
       "! Allows input to retain lowercase and uppercase characters
-      case_sensitive_entry     TYPE abap_bool,
+      "! $required
+      case_sensitive_entry             TYPE abap_bool,
       "! <p class="shorttext">Show Sign</p>
       "! Enables display of a plus/minus sign for numeric values
-      show_sign                TYPE abap_bool,
+      "! $required
+      show_sign                        TYPE abap_bool,
       "! <p class="shorttext">Template Disabled</p>
       "! Allows all characters to be entered in CHAR fields, including special characters such as '!', '?' and '_'"
-      template_disabled        TYPE abap_bool,
+      "! $required
+      template_disabled                TYPE abap_bool,
       "! <p class="shorttext">Foreign Key Check</p>
       "! Enables or disables the Dictionary foreign key check
-      foreign_key_check        TYPE abap_bool,
+      "! $required
+      foreign_key_check                TYPE abap_bool,
       "! <p class="shorttext">Set Parameter</p>
       "! Stores the field value in SAP memory using the specified parameter ID
-      set_parameter            TYPE abap_bool,
+      "! $required
+      set_parameter                    TYPE abap_bool,
       "! <p class="shorttext">Get Parameter</p>
       "! Retrieves the field value from SAP memory using the specified parameter ID
-      get_parameter            TYPE abap_bool,
+      "! $required
+      get_parameter                    TYPE abap_bool,
       "! <p class="shorttext">Parameter ID</p>
       "! Identifies the SAP memory parameter used by SET/GET parameters
-      parameter_id             TYPE c LENGTH 20,
+      "! $required
+      parameter_id                     TYPE c LENGTH 20,
       "! <p class="shorttext">Conversion Exit</p>
       "! Specifies the conversion routine used to format and interpret field values
-      conversion_exit          TYPE c LENGTH 5,
+      "! $required
+      conversion_exit                  TYPE c LENGTH 5,
     END OF ty_field_special.
 
   TYPES:
@@ -712,47 +763,62 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     BEGIN OF ty_field_display,
       "! <p class="shorttext">Bright</p>
       "! Highlights the field to make it stand out on the screen
+      "! $required
       bright                 TYPE abap_bool,
       "! <p class="shorttext">Invisible</p>
       "! Hides the field and its contents at runtime
+      "! $required
       invisible              TYPE abap_bool,
       "! <p class="shorttext">Right Justified</p>
       "! Aligns field content to the right
+      "! $required
       right_justified        TYPE abap_bool,
       "! <p class="shorttext">Display Leading Zeros</p>
       "! Displays numeric values with leading zeros
+      "! $required
       leading_zeros          TYPE abap_bool,
       "! <p class="shorttext">Two-Dimensional Display</p>
       "! Displays input/output fields in a flat two-dimensional style
+      "! $required
       two_dimensional        TYPE abap_bool,
       "! <p class="shorttext">Fixed Font</p>
       "! Displays field content using a fixed-width font
+      "! $required
       fixed_font             TYPE abap_bool,
       "! <p class="shorttext">As Label On Left</p>
       "! Uses the field as the label for the element on its right
+      "! $required
       label_left             TYPE abap_bool,
       "! <p class="shorttext">As Label On Right</p>
       "! Uses the field as the label for the element on its left
+      "! $required
       label_right            TYPE abap_bool,
       "! <p class="shorttext">Double Click</p>
       "! Triggers an action when the field is double-clicked
+      "! $required
       double_click           TYPE abap_bool,
       "! <p class="shorttext">Left-To-Right Direction</p>
       "! Defines left-to-right text display and input
+      "! $required
       ltr_direction          TYPE abap_bool,
       "! <p class="shorttext">No BIDI Character Filtering</p>
       "! Preserves bidirectional text formatting characters
+      "! $required
       disable_bidi_filtering TYPE abap_bool,
       "! <p class="shorttext">No GUI Input History</p>
       "! Prevents SAP GUI from storing field input history
+      "! $required
       no_input_history       TYPE abap_bool,
       "! <p class="shorttext">AM/PM-Enabled Time Format</p>
       "! Allows time values to use the 12-hour AM/PM format
+      "! $required
       am_pm_time_format      TYPE abap_bool,
       "! <p class="shorttext">Output Style</p>
       "! Defines how decimal floating point numbers are formatted and displayed on the screen
+      "! $required
       output_style           TYPE ty_output_style,
     END OF ty_field_display.
+
 
   TYPES:
     "! <p class="shorttext">Modification Groups And Functions</p>
@@ -760,41 +826,54 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     BEGIN OF ty_field_mod_groups_funcs,
       "! <p class="shorttext">Group 1</p>
       "! Identifier for SCREEN-GROUP1 used for dynamic field modifications
-      group1               TYPE c LENGTH 3,
+      "! $required
+      group1                  TYPE c LENGTH 3,
       "! <p class="shorttext">Group 2</p>
       "! Identifier for SCREEN-GROUP2 used for dynamic field modifications
-      group2               TYPE c LENGTH 3,
+      "! $required
+      group2                  TYPE c LENGTH 3,
       "! <p class="shorttext">Group 3</p>
       "! Identifier for SCREEN-GROUP3 used for dynamic field modifications
-      group3               TYPE c LENGTH 3,
+      "! $required
+      group3                  TYPE c LENGTH 3,
       "! <p class="shorttext">Group 4</p>
       "! Identifier for SCREEN-GROUP4 used for dynamic field modifications
-      group4               TYPE c LENGTH 3,
+      "! $required
+      group4                  TYPE c LENGTH 3,
       "! <p class="shorttext">SFW Switch</p>
       "! Identifier for switch in the switch framework
-      switch               TYPE c LENGTH 30,
+      "! $required
+      switch                  TYPE c LENGTH 30,
       "! <p class="shorttext">Reaction To SFW Switch</p>
       "! Determines whether the object is displayed or hidden when the assigned Switch Framework switch is active
-      reaction_to_switch   TYPE ty_reaction_to_switch,
+      "! $required
+      reaction_to_switch      TYPE ty_reaction_to_switch,
       "! <p class="shorttext">Entry Help</p>
       "! Indicates whether value help is available for the field
-      entry_help           TYPE abap_bool,
+      "! $required
+      entry_help              TYPE abap_bool,
       "! <p class="shorttext">Value List</p>
       "! Determines the source of values displayed in the dropdown list
-      value_list           TYPE ty_value_list,
+      "! $required
+      value_list              TYPE ty_value_list,
       "! <p class="shorttext">Input Help Key</p>
       "! Controls the availability and visibility of the input help (F4) button for the field
-      input_help_key       TYPE ty_input_help_key,
+      "! $required
+      input_help_key          TYPE ty_input_help_key,
       "! <p class="shorttext">Function Code</p>
       "! Defines the function code triggered by a user interaction
-      function_code        TYPE c LENGTH 20,
+      "! $required
+      function_code           TYPE c LENGTH 20,
       "! <p class="shorttext">Function Code Type</p>
       "! Determines how the associated function code is handled at runtime
-      function_code_type   TYPE ty_function_code_type,
+      "! $required
+      function_code_type      TYPE ty_function_code_type,
       "! <p class="shorttext">Dynamic Context Menu</p>
       "! Dynamic callback ON_CTMENU
-      dynamic_context_menu TYPE c LENGTH 20,
+      "! $required
+      dynamic_context_menu    TYPE c LENGTH 20,
     END OF ty_field_mod_groups_funcs.
+
 
   TYPES:
     "! <p class="shorttext">References</p>
@@ -802,11 +881,31 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     BEGIN OF ty_field_references,
       "! <p class="shorttext">Search Help</p>
       "! Specifies the search help assigned to the field, either statically or dynamically
+      "! $required
       search_help     TYPE c LENGTH 132,
       "! <p class="shorttext">Reference Field</p>
       "! Defines a link to another screen element
+      "! $required
       reference_field TYPE c LENGTH 132,
     END OF ty_field_references.
+
+  TYPES:
+    "! <p class="shorttext">Table Control Field Role</p>
+    "! Role of this field within a Table Control container
+    BEGIN OF ty_table_ctrl_field,
+      "! <p class="shorttext">Title</p>
+      "! Marks this element as the title row of the Table Control
+      "! $required
+      title            TYPE abap_bool,
+      "! <p class="shorttext">Column Heading</p>
+      "! Marks this element as a column heading of the Table Control
+      "! $required
+      column_heading   TYPE abap_bool,
+      "! <p class="shorttext">Selection Column</p>
+      "! Marks this element as the row selection column of the Table Control
+      "! $required
+      selection_column TYPE abap_bool,
+    END OF ty_table_ctrl_field.
 
   TYPES:
     "! <p class="shorttext">Screen Field</p>
@@ -844,10 +943,14 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
       "! Reference assignments for the screen field
       "! $required
       references                TYPE ty_field_references,
-      "! <p class="shorttext">Property Bag</p>
-      "! Property bag of the screen element
+***      "! <p class="shorttext">Property Bag</p>
+***      "! Property bag of the screen element
+***      "! $required
+***      property_bag              TYPE ty_property_bag,
+      "! <p class="shorttext">Table Control Field Role</p>
+      "! Role of this field within a Table Control container
       "! $required
-      property_bag              TYPE ty_property_bag,
+      table_ctrl                TYPE ty_table_ctrl_field,
     END OF ty_field.
 
   TYPES:
@@ -859,7 +962,7 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
       program TYPE c LENGTH 40,
       "! <p class="shorttext">Screen</p>
       "! The screen number of the target subscreen within the specified program
-      screen  TYPE c LENGTH 4,
+      screen TYPE c LENGTH 4,
     END OF ty_subscreen_target.
 
   TYPES:
@@ -868,16 +971,16 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     BEGIN OF ty_subscreen_attributes,
       "! <p class="shorttext">Scrollable</p>
       "! Allows the field content to be scrolled when it exceeds the visible area
-      scrollable         TYPE abap_bool,
+      scrollable TYPE abap_bool,
       "! <p class="shorttext">SFW Switch</p>
       "! Identifier for switch in the switch framework
-      switch             TYPE c LENGTH 30,
+      switch TYPE c LENGTH 30,
       "! <p class="shorttext">Reaction To SFW Switch</p>
       "! Determines whether the object is displayed or hidden when the assigned Switch Framework switch is active
       reaction_to_switch TYPE ty_reaction_to_switch,
       "! <p class="shorttext">Target Subscreen</p>
       "! Specifies the subscreen to be displayed, identified by its program name and screen number
-      target             TYPE ty_subscreen_target,
+      target TYPE ty_subscreen_target,
     END OF ty_subscreen_attributes.
 
   TYPES:
@@ -909,37 +1012,37 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     BEGIN OF ty_table_control_attributes,
       "! <p class="shorttext">Context Menu Form</p>
       "! Form routine for context menu handling
-      context_menu_form       TYPE string,
+      context_menu_form TYPE string,
       "! <p class="shorttext">With Title</p>
       "! Determines whether the table control includes a title
-      with_title              TYPE abap_bool,
-      "! <p class="shorttext">Title</p>
-      "! Text displayed in the title line of the table control
-      title                   TYPE string,
+      with_title TYPE abap_bool,
+      "! <p class="shorttext">Title Field</p>
+      "! Title field of the table control
+      title_field TYPE string,
       "! <p class="shorttext">With Column Headers</p>
       "! Determines whether the table control columns include a title line
-      with_column_headers     TYPE abap_bool,
+      with_column_headers TYPE abap_bool,
       "! <p class="shorttext">Configurability</p>
       "! Determines whether users can access the table control configuration dialog
-      configurability         TYPE abap_bool,
+      configurability TYPE abap_bool,
       "! <p class="shorttext">Vertical Separators</p>
       "! Determines whether the table control displays vertical separators between columns
-      vertical_separators     TYPE abap_bool,
+      vertical_separators TYPE abap_bool,
       "! <p class="shorttext">Horizontal Separators</p>
       "! Determines whether the table control displays horizontal separators between lines
-      horizontal_separators   TYPE abap_bool,
+      horizontal_separators TYPE abap_bool,
       "! <p class="shorttext">Line Selectability</p>
       "! Determines how many table control lines can be selected simultaneously
-      line_selectability      TYPE ty_line_selectability,
+      line_selectability TYPE ty_line_selectability,
       "! <p class="shorttext">Column Selectability</p>
       "! Determines how many table control columns can be selected simultaneously
-      column_selectability    TYPE ty_column_selectability,
+      column_selectability TYPE ty_column_selectability,
       "! <p class="shorttext">With Selection Column</p>
       "! Determines whether the table control displays a dedicated column for line selection
-      with_selection_column   TYPE abap_bool,
+      with_selection_column TYPE abap_bool,
       "! <p class="shorttext">Selection Column</p>
       "! Text displayed in the selection column of the table control
-      selection_column        TYPE string,
+      selection_column TYPE string,
       "! <p class="shorttext">Number of Fixed Columns</p>
       "! Determines the number of leading table control columns that remain fixed during horizontal scrolling and cannot be moved
       number_of_fixed_columns TYPE i,
@@ -963,12 +1066,12 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
     "! <p class="shorttext">Specific Container Attributes</p>
     "! Container-specific attributes based on the container type
     BEGIN OF ty_container_specifics,
-      "! <p class="shorttext">Specific Subscreen Attributes</p>
-      "! Subscreen-specific attributes
-      subscreen         TYPE ty_subscreen_attributes,
-      "! <p class="shorttext">Specific Tabstrip Attributes</p>
-      "! Tabstrip-specific attributes
-      tabstrip_control  TYPE ty_tabstrip_attributes,
+***      "! <p class="shorttext">Specific Subscreen Attributes</p>
+***      "! Subscreen-specific attributes
+***      subscreen         TYPE ty_subscreen_attributes,
+***      "! <p class="shorttext">Specific Tabstrip Attributes</p>
+***      "! Tabstrip-specific attributes
+***      tabstrip_control  TYPE ty_tabstrip_attributes,
 
 *      "! <p class="shorttext">Specific Splitter Control Attributes</p>
 *      "! Splitter control-specific attributes
@@ -1003,6 +1106,10 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
       "! Technical container name
       "! $required
       name                          TYPE string,
+      "! <p class="shorttext">Parent Container</p>
+      "! Name of the container this container is placed in
+      "! $required
+      element_of                    TYPE string,
       "! <p class="shorttext">Line</p>
       "! Screen line position
       "! $required
@@ -1021,33 +1128,52 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
       height                        TYPE i,
       "! <p class="shorttext">Minimum Container Length</p>
       "! Minimum number of columns
+      "! $required
       minimum_length                TYPE i,
       "! <p class="shorttext">Minimum Container Height</p>
       "! Minimum number of lines
+      "! $required
       minimum_height                TYPE i,
       "! <p class="shorttext">Vertical Resizing</p>
       "! Allows the container height to adapt to vertical window resizing
+      "! $required
       vertical_resizing             TYPE abap_bool,
       "! <p class="shorttext">Horizontal Resizing</p>
       "! Allows the container width to adapt to horizontal window resizing
+      "! $required
       horizontal_resizing           TYPE abap_bool,
       "! <p class="shorttext">Specific Container Attributes</p>
       "! Container-specific attributes based on the container type
-      specific_container_attributes TYPE ty_container_specifics,
-      "! <p class="shorttext">Property Bag</p>
-      "! Property bag of the container
       "! $required
-      property_bag                  TYPE ty_property_bag,
+      specific_container_attributes TYPE ty_container_specifics,
+***      "! <p class="shorttext">Property Bag</p>
+***      "! Property bag of the container
+***      "! $required
+***      property_bag                  TYPE ty_property_bag,
       "! <p class="shorttext">Container Screen Fields</p>
       "! Array of screen fields within the container
       "! $required
       fields                        TYPE STANDARD TABLE OF ty_field WITH EMPTY KEY,
-* handle recursion in the serializer !
 ***      "! <p class="shorttext">Containers Within The Container</p>
 ***      "! Array of containers within the container
 ***      "! $required
-***      containers                    TYPE STANDARD TABLE OF ty_container WITH EMPTY KEY,    // handle recursion in the serializer !
+****      containers                   TYPE ty_container, " WITH EMPTY KEY,    " handle recursion in the serializer !
+***      containers                   TYPE STANDARD TABLE OF ty_container WITH EMPTY KEY,    " handle recursion in the serializer !
     END OF ty_container.
+
+  "! <p class="shorttext">Description</p>
+  "! Description of the ABAP object
+  TYPES ty_description TYPE c LENGTH 74.
+
+  TYPES:
+    "! <p class="shorttext">Header</p>
+    "! The header for an ABAP subobject with a description of 74 characters
+    BEGIN OF ty_header,
+      "! <p class="shorttext">Description</p>
+      "! Description of the DYNPRO object
+      "! $required
+      description TYPE ty_description,
+    END OF ty_header.
 
   TYPES:
     "! <p class="shorttext">Dynpro</p>
@@ -1060,15 +1186,15 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
       "! <p class="shorttext">Header</p>
       "! Header
       "! $required
-      header         TYPE if_aff_types_v1=>ty_header_70_no_abap_lv,
+      header         TYPE ty_header,
       "! <p class="shorttext">Screen Attributes</p>
       "! Screen attributes
       "! $required
       attributes     TYPE ty_attributes,
-      "! <p class="shorttext">Property Bag</p>
-      "! Property bag of the screen
-      "! $required
-      property_bag   TYPE ty_property_bag,
+***      "! <p class="shorttext">Property Bag</p>
+***      "! Property bag of the screen
+***      "! $required
+***      property_bag   TYPE ty_property_bag,
       "! <p class="shorttext">Screen Fields</p>
       "! Array of screen fields
       "! $required
@@ -1078,5 +1204,4 @@ INTERFACE zif_aff_dynp_v1 PUBLIC.
       "! $required
       containers     TYPE STANDARD TABLE OF ty_container WITH EMPTY KEY,
     END OF ty_main.
-
 ENDINTERFACE.
